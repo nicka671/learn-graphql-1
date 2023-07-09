@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: learn-graphql
+  servlet:
+    multipart:
+      max-file-size: 2MB
+
+server:
+  http2:
+    enabled: true
+
+graphql:
+  servlet:
+    maxQueryDepth: 100
+    exception-handlers-enabled: true
+    tracingEnabled: false
+  playground:
+    tabs:
+      - name: Get Bank Account
+        query: classpath:playground/get_bank_account.graphql
+        variables: classpath:playground/bank_account_variables.json
